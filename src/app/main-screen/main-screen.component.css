@@ -1,0 +1,113 @@
+
+.horizontal-bar {
+    position: sticky;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.744);
+    top: 56px;
+    height: 61px;
+    z-index: 1000;
+  }
+
+  .horizontal-bar-link {
+    padding: 7px 12px 7px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    justify-content: center;
+    margin-right: 14.5px;
+    font-weight: 500;
+    background-color: hsla(0,0%,100%,0.14);
+    display: flex;
+    align-items: center;
+    height: 16.475px;
+    cursor: pointer;
+  }
+  .horizontal-bar-link:hover{
+    background-color: #6C6E6D;
+  }
+
+  .horizontal-bar-link:last-child{
+    background-color: black;
+  }
+  .horizontal-bar-link:first-child{
+    background-color: white;
+    color: black;
+  }
+.mainScreen{
+    position: relative;
+    top: 56px;
+    left: 260px;
+    height: auto;
+    width: 1259px;
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar track */
+}
+*{
+  scrollbar-color: #ccccccbb black;
+}
+.thumbnail {
+    border-radius: 5%;
+    width: 100%;
+  }
+  
+  .video-title {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: -5px;
+  }
+  
+  .video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+  
+  .profile-picture {
+    width: 36px;
+    border-radius: 50px;
+  }
+  
+  .thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+  }
+  
+  .video-author,
+  .video-stats {
+    font-size: 14px;
+    font-family: "Roboto","Arial",sans-serif;
+    color: #AAAAAA;
+  }
+  
+  .video-author {
+    margin-bottom: -12px;
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    row-gap: 30px;
+    margin-right: 55px;
+    margin-top: 17px;
+  }
+    
+  .video-time {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+  }
