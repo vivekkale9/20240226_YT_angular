@@ -9,6 +9,14 @@
     padding: 12px;
     overflow-y: hidden;
   }
+  .settings-screen{
+    position: relative;
+    top: 39px;
+    left: 260px;
+    height: 100vh;
+    width: 1259px;
+    background-color: black;
+}
   .heading{
     padding-left: 12px;
     height: 70px;

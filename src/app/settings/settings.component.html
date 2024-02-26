@@ -1,9 +1,22 @@
 <app-navbar></app-navbar>
-<div class="sideBar">
-    <div class="heading">
-        <div>Settings</div>
+
+    <div class="sideBar">
+        <div class="heading">
+            <div>Settings</div>
+        </div>
+        <div *ngFor="let link of sidebarLinks" class="sidebar-link">
+            <div>{{ link }}</div>
+        </div>
     </div>
-    <div *ngFor="let link of sidebarLinks" class="sidebar-link">
-        <div>{{ link }}</div>
+    <div class="settings-screen">
+        <div class="account" style="height: 125px;">
+            <div class="account-text" style="height: 125px;">
+                <div class="account-heading" style="color: white;padding-top: 81px;margin-left: 100px;">Account</div>
+                <div class="account-instructions" style="color: white;margin-left: 100px;font-size: x-large;margin-top: 49px;">Choose how you appear and what you see on youtube</div>
+                <div class="signed-in" style="color: #AAAA9B;margin-left: 100px; font-size: small;margin-top: 12px;">Signed in as vivekskale03.com</div>
+            </div>
+            <div class="account-logo"></div>
+        </div>
+        
     </div>
-</div>
+    

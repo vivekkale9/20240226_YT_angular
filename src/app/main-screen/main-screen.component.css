@@ -90,7 +90,9 @@
   .video-author {
     margin-bottom: -12px;
   }
-  
+  .settings-screen .account{
+    height: 50px;
+  }
   .video-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -1,6 +1,25 @@
 
-<div class="container">
-    <app-navbar></app-navbar>
-    <app-side-bar></app-side-bar>
+
     
-</div>
+    <div class="mainScreen">
+        <app-navbar></app-navbar>
+        <app-side-bar></app-side-bar>
+        <section class="video-grid">
+          <div *ngFor="let video of videoPreviews" class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" [src]="video.thumbnailSrc" alt="Thumbnail">
+              <div class="video-time">{{ video.videoTime }}</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" [src]="video.profileSrc" alt="Profile Picture">
+              </div>
+              <div class="video-info">
+                <p class="video-title" style="color: white;">{{ video.title }}</p>
+                <p class="video-author">{{ video.author }}</p>
+                <p class="video-stats">{{ video.views }}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
