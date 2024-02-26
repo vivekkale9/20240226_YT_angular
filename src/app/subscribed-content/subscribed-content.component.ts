@@ -11,6 +11,10 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrl: './subscribed-content.component.css'
 })
 export class SubscribedContentComponent {
+  Subscriptions:Array<string>=[
+    'Tanmay Bhat',
+    'Iman Gadzi'
+  ]
   videoPreviews = [
     { thumbnailSrc: '../../assets/tanmayBhat.PNG', profileSrc: '../../assets/tanmayProfile.PNG', videoTime: '14:20', title: 'The Nick Jonas Vlog - Vlog 129', author: 'Tanmay Bhat', views: '3.4M views &#183; 6 months ago' },
     { thumbnailSrc: '../../assets/thumb2.PNG', profileSrc: '../../assets/shemaroProfile.PNG', videoTime: '02:45:55', title: 'Golmaal!!', author: 'Shemaroo', views: '19M views &#183; 4 years ago' },
@@ -23,19 +27,17 @@ export class SubscribedContentComponent {
     { thumbnailSrc: '../../assets/tanmayBhat.PNG', profileSrc: '../../assets/tanmayProfile.PNG', videoTime: '14:20', title: 'The Nick Jonas Vlog - Vlog 129', author: 'Tanmay Bhat', views: '3.4M views &#183; 6 months ago' },
 
   ];
-  sidebarLinks_subscriptions = [
-    {text: 'Subscriptions', fontWeight: '700' },
-    {profileSrc: '../../assets/tanmayProfile.PNG', routerLink: '/bhatt-page', text: 'Tanmay Bhat' },
-    {profileSrc: '../../assets/snippetProfile.PNG', routerLink: '/snippet-page', text: 'Ezz Snippet' },
-    {profileSrc: '../../assets/arpitProfile.PNG', routerLink: '/harry-page', text: 'CodeWithHarry' }
-  ];
+  filteredData: any[] = [];
 
-  getFilteredVideoPreviews(author: string): any[] {
-    return this.videoPreviews.filter(video => {
-      const authorName = this.sidebarLinks_subscriptions.find(subscription => subscription.text === author);
-      return authorName;
-    });
+    constructor() {
+    this.filteredData = this.videoPreviews.filter((video) =>
+      this.Subscriptions.includes(video.author)
+    );
   }
+  filterBySubscription(subscription: string) {
+    this.filteredData = this.videoPreviews.filter(
+      (video) => video.author === subscription
+    );
+  }
 
-  
 }

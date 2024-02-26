@@ -5,7 +5,7 @@
         <app-navbar></app-navbar>
         <app-side-bar></app-side-bar>
         <section class="video-grid">
-          <div *ngFor="let video of videoPreviews" class="video-preview">
+          <div *ngFor="let video of filteredData" class="video-preview">
             <div class="thumbnail-row">
               <img class="thumbnail" [src]="video.thumbnailSrc" alt="Thumbnail">
               <div class="video-time">{{ video.videoTime }}</div>
