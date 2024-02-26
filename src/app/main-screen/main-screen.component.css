@@ -8,7 +8,7 @@
     color: rgba(255, 255, 255, 0.744);
     top: 56px;
     height: 61px;
-    z-index: 1000;
+    z-index: 2;
   }
 
   .horizontal-bar-link {

@@ -1,99 +1,49 @@
 <div class="sideBar">
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-house"></i><a routerLink="/">Home</a></div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-z"></i>Shorts</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-brands fa-youtube"></i><a routerLink="/subscriptions">Subscriptions</a></div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-play"></i>YouTube Music</div>
+    <div *ngFor="let link of navigationLinks" class="sidebar-link">
+        <div>
+          <ng-container *ngIf="link.iconClass">
+            <i class="{{ link.iconClass }}"></i>
+          </ng-container>
+          <ng-container *ngIf="link.routerLink">
+            <a [routerLink]="link.routerLink">{{ link.text }}</a>
+          </ng-container>
+          <ng-container *ngIf=" !link.routerLink">
+            {{ link.text }}
+          </ng-container>
+        </div>
     </div>
     <hr>
-    <div class="sidebar-link">
-        <img src="" />
-        <div>You<i class="fa-solid fa-chevron-right"></i></div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div>Your channel</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-clock-rotate-left"></i>History</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-circle-play"></i>Your videos</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-regular fa-clock"></i>Watch later</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-download"></i>Downloads</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-angle-down"></i>Show more</div>
+    <div *ngFor="let link of sidebarLinks_you" class="sidebar-link">
+        <div>
+          <ng-container *ngIf="link.icon">
+            <i class="{{ link.icon }}"></i>
+          </ng-container>
+          {{ link.text }}
+        </div>
+      </div>
+    <hr>
+    <div *ngFor="let link of sidebarLinks_subscriptions" class="sidebar-link">
+        <div [style.font-weight]="link.fontWeight">
+          <ng-container *ngIf="link.profileSrc">
+            <img class="logoSubs" [src]="link.profileSrc" alt="Profile Image" />
+          </ng-container>
+          <ng-container *ngIf="link.routerLink">
+            <a [routerLink]="link.routerLink">{{ link.text }}</a>
+          </ng-container>
+          <ng-container *ngIf="!link.profileSrc && !link.routerLink">
+            {{ link.text }}
+          </ng-container>
+        </div>
     </div>
     <hr>
-    <div class="sidebar-link">
-        <img src="" />
-        <div style="font-weight: 700;">Subscriptions</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><img class="logoSubs" src="../../assets/tanmayProfile.PNG"><a routerLink="/bhatt-page">Bhatt</a></div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><img class="logoSubs" src="../../assets/snippetProfile.PNG"><a routerLink="/snippet-page">Ezz Snippet</a></div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><img class="logoSubs" src="../../assets/arpitProfile.PNG"><a routerLink="/harry-page">CodeWithHarry</a></div>
-    </div>
-    <hr>
-    <div class="sidebar-link">
-        <img src="" />
-        <div style="font-weight: 700;">Explore</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-fire"></i>Trending</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-bag-shopping"></i>Shopping</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-music"></i>Music</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-clapperboard"></i>Films</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-life-ring"></i>Live</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-gamepad"></i>Gaming</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="" />
-        <div><i class="fa-solid fa-newspaper"></i>News</div>
-    </div>
+    <div *ngFor="let link of exploreLinks" class="sidebar-link">
+        <div [style.font-weight]="link.fontWeight">
+          <ng-container *ngIf="link.iconClass">
+            <i class="{{ link.iconClass }}"></i>
+          </ng-container>
+          {{ link.text }}
+        </div>
+      </div>
     <hr>
     <div class="sidebar-link">
         <div>

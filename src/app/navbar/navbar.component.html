@@ -19,8 +19,9 @@
         <button class="notification">
             <i class="fa-regular fa-bell fa-lg"></i>
         </button>
-        <button class="account">
+        <button class="account" (click)="dropdownMenu.settingsMenuToggle()">
             V
+            <app-dropdown-menu #dropdownMenu></app-dropdown-menu>
         </button>
     </div>
     
