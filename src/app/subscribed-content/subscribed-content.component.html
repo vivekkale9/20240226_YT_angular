@@ -4,6 +4,10 @@
     <div class="mainScreen">
         <app-navbar></app-navbar>
         <app-side-bar></app-side-bar>
+        <div class="subs-top" style="display: flex; justify-content: space-between;">
+          <div class="subs-top-left" style="color: white; font-size: large; font-weight: 600;">Latest</div>
+          <div class="subs-top-right" style="color: #3EA6E3; margin-right: 60px;">Manage <i class="fa-solid fa-grip" style="color: white;"></i></div>
+        </div>
         <section class="video-grid">
           <div *ngFor="let video of filteredData" class="video-preview">
             <div class="thumbnail-row">
