@@ -35,9 +35,23 @@
   .sideBar:hover {
     overflow-y: auto; 
 }
-
+.button{
+  margin-left: 130px;
+  height: 50px;
+  width: 50px;
+  margin-right: 36px;
+  margin-top: 12px;
+  background-color: #0098A6;
+  color: white;
+  border-radius: 50%;
+  border: none; 
+  outline: none;
+  cursor: pointer;
+}
 hr{
   border: 0.5px solid hsl(0,0%,18.82%);
+  margin-left: 100px;
+  margin-right: 150px;
 }
 
 .sideBar::-webkit-scrollbar {
